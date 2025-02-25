@@ -1,22 +1,13 @@
+// Rule 05: Object Orientation (OBJ)
+// OBJ01-J: Limit Accessibility of Fields 
+
 
 public class Widget {
-  public int total; // Number of elements
- 
-  void add() {
-    if (total < Integer.MAX_VALUE) {     
-      total++;
-      // ...
-    } else {
-      throw new ArithmeticException("Overflow");
+    private int total; // Declared private
+   
+    public int getTotal () {
+      return total;
     }
-  }
- 
-  void remove() { 
-    if (total > 0) {     
-      total--;
-      // ...
-    } else {
-      throw new ArithmeticException("Overflow");
-    }
-  }
+   
+    // Definitions for add() and remove() remain the same
 }
